@@ -1,3 +1,21 @@
+.vscode/
+__pycache__/
+results/
+tests/
+old/
+Output/
+Settings/
+records.xls
+test.json
+test.py
+test_run.py
+examples/cur_framework_options.py
+PRIVATE_RUNNER.py
+Configurun-Workspaces/
+*.code-workspace
+*.ps1
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
