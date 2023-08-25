@@ -1,6 +1,6 @@
 # MVTS-Learner
 MVTS-learner is a GUI-based time-series machine learning framework for multivariate time-series classification tasks built on top of [Configurun](https://github.com/Woutah/configurun).
-The machine-learning framework has been built on top of the [mvts_transformer](https://github.com/gzerveas/mvts_transformer)-framework - as such, it supports its TST-architecture and any of the datasets described by these authors. We furthermore added additional classifiers and dataset support to the framework. 
+The machine-learning framework has been built on top of the [mvts_transformer](https://github.com/gzerveas/mvts_transformer)-framework - as such, it supports its TST-architecture and any of the datasets described by these authors. We furthermore added additional classifiers and dataset support to the framework, as well as tensorboard & wandb-logging.
 
 The framwork-app can also be run as a client-server setup, allowing the user to queue and run experiments remotely using the GUI (see [Configurun](https://github.com/Woutah/configurun) for all features).
 
@@ -9,7 +9,7 @@ Adding custom torch-based classifiers is a relatively simple process, see the [f
 
 Instead of running the framework using a command-line, e.g.:
 ```bash
-python main.py --experiment_name='UAE-UWaveGestureLibrary' --run_base_name='Wave-run' --excel='./records.xlsx' --task='classification' --use_gpu=0,1,2 --seed=1 --dim_model=256 --n_heads=16 --pos_encoding=16 ############# Etc ###############
+python main.py --experiment_name='UAE-UWaveGestureLibrary' --run_base_name='Wave-run' --excel='./records.xlsx' --task='classification' --use_gpu=0,1,2 --seed=1 --dim_model=256 --n_heads=16 --pos_encoding='learnable' ############# Etc ###############
 ```
 
 The framework is made available to the user using an easy-to-use GUI, non-default options are displayed in bold so we can easily see what kind of configuration we're dealing with. On-hover, the help-messages of each option are shown. The following example shows the equivalent general & model-options:
@@ -18,7 +18,7 @@ The framework is made available to the user using an easy-to-use GUI, non-defaul
 	<img src="./mvts_learner/examples/images/configurun_settings_example_even_larger.png" width="800" />
 </p>
 
-For more examples of the features of the GUI, please see the [Configurun-GitHub](https://github.com/Woutah/configurun)
+For more examples of the features of the App, please also see the [Configurun-GitHub](https://github.com/Woutah/configurun)
 
 ## Table of Contents
 - [MVTS-Learner](#mvts-learner)
