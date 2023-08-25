@@ -41,6 +41,7 @@ setup(
 		'xlrd>=2.0.1',
 		'xlutils>=2.0.0',
 		'xlwt>=1.3.0',
+        'tensorboard>=2.13.0',
 
 		#=================Other========================
         'pyside6-utils>=1.2.2', #Works for 1.2.1
