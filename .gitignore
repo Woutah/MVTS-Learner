@@ -10,6 +10,7 @@ test.json
 test.py
 test_run.py
 mvts_learner/examples/projects
+mvts_learner/examples/images/*.mp4
 examples/cur_framework_options.py
 PRIVATE_RUNNER.py
 Configurun-Workspaces/
