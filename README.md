@@ -1,23 +1,25 @@
 # MVTS-Learner
-MVTS-learner is a GUI-based time-series machine learning framework for multivariate time-series classification tasks built on top of [Configurun](https://github.com/Woutah/configurun).
-The machine-learning framework has been built on top of the [mvts_transformer](https://github.com/gzerveas/mvts_transformer)-framework - as such, it supports its TST-architecture and any of the datasets described by these authors. We furthermore added additional classifiers and dataset support to the framework, as well as tensorboard & wandb-logging.
 
-The framwork-app can also be run as a client-server setup, allowing the user to queue and run experiments remotely using the GUI (see [Configurun](https://github.com/Woutah/configurun) for all features).
+MVTS-learner is a GUI-based time-series machine learning framework for multivariate time-series classification tasks built using [Configurun](https://github.com/Woutah/configurun).
+The framework has been built on top of the [mvts_transformer](https://github.com/gzerveas/mvts_transformer)-framework - as such, it supports its TST-architecture and any of the datasets described by these authors. We furthermore added additional classifiers and dataset support to the framework, as well as [Tensorboard](https://www.tensorflow.org/tensorboard/get_started) & [Wandb](https://wandb.ai/)-logging.
 
-Adding custom torch-based classifiers is a relatively simple process, see the [following chapter](#custom-classifier) for more information.
-
-
+<!-- Instead of running the framework using a command-line, e.g.:
 Instead of running the framework using a command-line, e.g.:
 ```bash
 python main.py --experiment_name='UAE-UWaveGestureLibrary' --run_base_name='Wave-run' --excel='./records.xlsx' --task='classification' --use_gpu=0,1,2 --seed=1 --dim_model=256 --n_heads=16 --pos_encoding='learnable' ############# Etc ###############
 ```
 
-The framework is made available to the user using an easy-to-use GUI, non-default options are displayed in bold so we can easily see what kind of configuration we're dealing with. On-hover, the help-messages of each option are shown. The following example shows the equivalent general & model-options:
+<!-- The framework is made available to the user using an easy-to-use GUI, non-default options are displayed in bold so we can easily see what kind of configuration we're dealing with. On-hover, the help-messages of each option are shown. The following example shows the equivalent general & model-options: -->
+
+
+The framwork-app can also be run as a client-server setup, allowing the user to queue and run experiments remotely using the GUI (see [Configurun](https://github.com/Woutah/configurun) for all features).
 
 <p align="center">
-	<img src="./mvts_learner/examples/images/configurun_settings_example_even_larger.png" width="800" />
+	<img src="./mvts_learner/examples/images/example_app_video_lowerquality_halfframerate.gif"/>
 </p>
 
+
+Adding custom torch-based models is a relatively simple process, see the [following chapter](#custom-classifier) for more information.
 For more examples of the features of the App, please also see the [Configurun-GitHub](https://github.com/Woutah/configurun)
 
 ## Table of Contents
@@ -102,7 +104,8 @@ An example of a compatible Dataframe would be:
 </center>
 The group-column is optional, but can be used to split the dataset using these groups such that we don't train on data from "in-between" the test or validation set. Alternatively, a separate dataset can be specified for testing and validation. Each row corresponds to a single time-step, and each column to a single feature. 
 
-For preprocessing, analysis & labeling the data, we have also implemented [MVTS-Analyzer](https://github.com/Woutah/MVTS-Analyzer) - a GUI-based tool for multivariate time-series. This tool allows us to label data in a GUI, and export it so that it can directly be used as input for the MVTS-learner:
+For preprocessing, analysis & labeling the data, we have also implemented [MVTS-Analyzer](https://github.com/Woutah/MVTS-Analyzer) - a GUI-based tool for multivariate time-series. This tool allows us to label data in a GUI, and export it so that it can directly be used as input for MVTS-learner:
+
 <p align="center">
 	<img src="./mvts_learner/examples/images/mvts_analyzer_multi_ax_control_example.gif" width="1200" />
 </p>
